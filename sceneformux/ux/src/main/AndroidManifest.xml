@@ -17,4 +17,19 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.google.ar.sceneform.ux">
+    <!-- Always needed for AR. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- -User location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Add the line below -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
 </manifest>
